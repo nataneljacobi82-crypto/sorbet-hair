@@ -1,7 +1,7 @@
 /* ==========================================================================
    Sorbet Hair Studio — styles.css
    Demo site by Corivo Digital. Plain CSS, mobile-first, no build step.
-   Palette: bone / ink / cobalt / tangerine / sand.
+   Palette: bone / ink / cobalt / ice / sand.
    ========================================================================== */
 
 /* 1. Tokens ------------------------------------------------------------- */
@@ -15,8 +15,8 @@
   --line: rgba(20, 22, 28, 0.14);
   --cobalt: #1f3fff;
   --cobalt-deep: #142ab8;
-  --orange: #ff7a1a;
-  --orange-deep: #d95f06;
+  --ice: #bfe3ff;
+  --ice-deep: #9fd0f7;
   --white: #fffdf9;
 
   --display: "Bricolage Grotesque", "Avenir Next", "Helvetica Neue", sans-serif;
@@ -47,7 +47,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 800; line-heig
 h2 { font-size: var(--step-4); }
 h3 { font-size: var(--step-2); }
 .u { position: relative; white-space: nowrap; }
-.u::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.06em; height: 0.16em; background: var(--orange); z-index: -1; border-radius: 2px; }
+.u::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.06em; height: 0.16em; background: var(--ice); z-index: -1; border-radius: 2px; }
 p, ul, ol, dl, figure, fieldset { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 img, svg { display: block; max-width: 100%; }
@@ -60,7 +60,7 @@ button { font: inherit; color: inherit; }
 .wrap { width: min(100% - 2 * var(--gutter), 78rem); margin-inline: auto; }
 .eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cobalt); }
 .eyebrow::before { content: ""; width: 1.5rem; height: 3px; background: currentColor; }
-.eyebrow--light { color: var(--orange); }
+.eyebrow--light { color: var(--ice); }
 .lede { margin-top: 1.25rem; font-size: var(--step-1); line-height: 1.5; color: var(--muted); max-width: 34em; text-wrap: pretty; }
 .section__head { max-width: 46rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 
@@ -68,12 +68,12 @@ button { font: inherit; color: inherit; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 3.1rem; padding: 0.75rem 1.5rem; border-radius: var(--r); border: 2px solid transparent; font-family: var(--display); font-weight: 700; font-size: 1rem; letter-spacing: -0.01em; text-decoration: none; cursor: pointer; transition: transform 0.25s var(--ease), background 0.2s, color 0.2s, border-color 0.2s; }
 .btn--sm { min-height: 2.6rem; padding: 0.5rem 1.1rem; font-size: 0.92rem; }
 .btn--block { width: 100%; }
-.btn--orange { background: var(--orange); color: var(--ink); border-color: var(--orange); }
-.btn--orange:hover { background: var(--orange-deep); border-color: var(--orange-deep); color: var(--white); }
+.btn--ice { background: var(--ice); color: var(--ink); border-color: var(--ice); }
+.btn--ice:hover { background: var(--ice-deep); border-color: var(--ice-deep); color: var(--ink); }
 .btn--dark { background: var(--ink); color: var(--bone); border-color: var(--ink); }
 .btn--dark:hover { background: var(--cobalt); border-color: var(--cobalt); color: var(--white); }
 .btn--light { background: var(--bone); color: var(--ink); border-color: var(--bone); }
-.btn--light:hover { background: var(--orange); border-color: var(--orange); }
+.btn--light:hover { background: var(--ice); border-color: var(--ice); }
 .btn--line { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--line:hover { background: var(--ink); color: var(--bone); }
 .btn:active { transform: translateY(1px); }
@@ -83,8 +83,8 @@ button { font: inherit; color: inherit; }
 
 /* 3. Demo banner / skip ------------------------------------------------- */
 .demo-bar { background: var(--ink); color: var(--bone); font-size: 0.8rem; font-weight: 500; text-align: center; padding: 7px 0; line-height: 1.35; }
-.demo-bar a { color: var(--orange); text-decoration: underline; text-underline-offset: 2px; }
-.skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.6rem 1rem; background: var(--orange); color: var(--ink); border-radius: var(--r); font-weight: 600; }
+.demo-bar a { color: var(--ice); text-decoration: underline; text-underline-offset: 2px; }
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: 0.6rem 1rem; background: var(--ice); color: var(--ink); border-radius: var(--r); font-weight: 600; }
 .skip:focus { top: 1rem; }
 
 /* 4. Header ------------------------------------------------------------- */
@@ -125,7 +125,7 @@ button { font: inherit; color: inherit; }
 .hero__media { position: relative; margin: 0; }
 .hero__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); }
 .hero__media figcaption { margin-top: 0.6rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.sticker { position: absolute; left: -0.75rem; top: 1.5rem; display: grid; padding: 0.8rem 1rem; background: var(--orange); color: var(--ink); border-radius: var(--r); font-size: 0.75rem; line-height: 1.2; transform: rotate(-4deg); box-shadow: 0 14px 30px -16px rgba(20, 22, 28, 0.5); }
+.sticker { position: absolute; left: -0.75rem; top: 1.5rem; display: grid; padding: 0.8rem 1rem; background: var(--ice); color: var(--ink); border-radius: var(--r); font-size: 0.75rem; line-height: 1.2; transform: rotate(-4deg); box-shadow: 0 14px 30px -16px rgba(20, 22, 28, 0.5); }
 .sticker b { font-family: var(--display); font-size: 1.8rem; font-weight: 800; line-height: 1; }
 .band { margin-top: clamp(2.5rem, 6vw, 4.5rem); background: var(--cobalt); color: var(--white); }
 .band__in { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem 1.5rem; padding-block: 1.1rem; font-size: 0.88rem; }
@@ -146,7 +146,7 @@ button { font: inherit; color: inherit; }
 .slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
 .slider__after { clip-path: inset(0 0 0 var(--x)); }
 .slider__handle { position: absolute; top: 0; bottom: 0; left: var(--x); width: 3px; background: var(--bone); transform: translateX(-1.5px); pointer-events: none; }
-.slider__handle span { position: absolute; top: 50%; left: 50%; translate: -50% -50%; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: var(--orange); color: var(--ink); display: grid; place-items: center; font-size: 0.9rem; font-weight: 800; box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5); }
+.slider__handle span { position: absolute; top: 50%; left: 50%; translate: -50% -50%; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: var(--ice); color: var(--ink); display: grid; place-items: center; font-size: 0.9rem; font-weight: 800; box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5); }
 .slider__tag { position: absolute; bottom: 1rem; padding: 0.35rem 0.7rem; border-radius: var(--r); background: rgba(20, 22, 28, 0.75); color: var(--bone); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; pointer-events: none; }
 .slider__tag--l { left: 1rem; } .slider__tag--r { right: 1rem; }
 .slider__range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
@@ -184,7 +184,7 @@ button { font: inherit; color: inherit; }
 .idx__tab { position: absolute; top: 0; left: calc(var(--i) * 25%); width: 25%; height: var(--tab-h); display: flex; align-items: center; padding: 0 1rem; clip-path: polygon(0 0, calc(100% - 1.2rem) 0, 100% 100%, 0 100%); background: var(--c); color: var(--cfg); font-family: var(--display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; overflow: hidden; }
 .idx__body { background: var(--c); color: var(--cfg); border-radius: 0 var(--r) var(--r) var(--r); padding: clamp(1.4rem, 3vw, 2.5rem); display: grid; gap: 1.5rem; min-height: 24rem; box-shadow: 0 -12px 30px -24px rgba(20, 22, 28, 0.5); }
 .idx--cobalt { --c: var(--cobalt); --cfg: var(--white); }
-.idx--orange { --c: var(--orange); --cfg: var(--ink); }
+.idx--ice { --c: var(--ice); --cfg: var(--ink); }
 .idx--sand { --c: var(--sand); --cfg: var(--ink); }
 .idx--ink { --c: var(--ink); --cfg: var(--bone); }
 .idx__text h3 { font-size: var(--step-3); margin-bottom: 0.75rem; }
@@ -225,7 +225,7 @@ button { font: inherit; color: inherit; }
 /* 11. Stylists ------------------------------------------------------------------------ */
 .team { padding-block: var(--section); background: var(--ink); color: var(--bone); }
 .team .lede { color: rgba(244, 239, 230, 0.7); }
-.team .eyebrow { color: var(--orange); }
+.team .eyebrow { color: var(--ice); }
 .stylists { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .stylist { position: relative; display: grid; gap: 0.6rem; }
 .stylist img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); filter: saturate(0.85); transition: filter 0.3s; }
@@ -233,8 +233,8 @@ button { font: inherit; color: inherit; }
 .stylist div { display: grid; line-height: 1.25; }
 .stylist b { font-family: var(--display); font-size: 1.2rem; }
 .stylist span { font-size: 0.82rem; color: rgba(244, 239, 230, 0.65); }
-.stylist button { justify-self: start; padding: 0.45rem 0.9rem; border-radius: var(--r); border: 1.5px solid var(--orange); background: transparent; color: var(--orange); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.2s, color 0.2s; }
-.stylist button:hover { background: var(--orange); color: var(--ink); }
+.stylist button { justify-self: start; padding: 0.45rem 0.9rem; border-radius: var(--r); border: 1.5px solid var(--ice); background: transparent; color: var(--ice); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.stylist button:hover { background: var(--ice); color: var(--ink); }
 @media (min-width: 48em) { .stylists { grid-template-columns: repeat(5, 1fr); gap: 1.25rem; } }
 
 /* 12. Reviews -------------------------------------------------------------------------- */
@@ -258,7 +258,7 @@ button { font: inherit; color: inherit; }
 .hours dd { margin: 0; font-family: var(--display); font-weight: 700; }
 .book__contact { margin-top: 1.5rem; line-height: 1.7; }
 .book__contact a { text-decoration: none; }
-.book__contact a:hover { color: var(--orange); }
+.book__contact a:hover { color: var(--ice); }
 .form-card { background: var(--bone); color: var(--ink); border-radius: var(--r); padding: clamp(1.3rem, 3vw, 2.25rem); }
 .hp { position: absolute; left: -9999px; }
 .frow2 { display: grid; gap: 1rem; }
@@ -275,7 +275,7 @@ button { font: inherit; color: inherit; }
 .seg input { position: absolute; inset: 0; opacity: 0; }
 .seg span { display: inline-block; padding: 0.55rem 0.9rem; border-radius: var(--r); border: 1.5px solid var(--line); background: var(--white); font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s; }
 .seg input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--bone); }
-.seg input:focus-visible + span { outline: 3px solid var(--orange); outline-offset: 2px; }
+.seg input:focus-visible + span { outline: 3px solid var(--ice); outline-offset: 2px; }
 .form-note { margin-top: 0.9rem; font-size: 0.8rem; color: var(--muted); }
 .success { text-align: center; padding: 1.5rem 0; display: grid; justify-items: center; gap: 0.6rem; }
 .success svg { width: 3.5rem; height: 3.5rem; }
@@ -297,21 +297,21 @@ details p { padding: 0 0 1.2rem; color: var(--muted); max-width: 42em; }
 .footer { background: var(--ink); color: var(--bone); padding-block: 3.5rem 1.5rem; }
 .footer__grid { display: grid; gap: 2rem; padding-bottom: 2rem; }
 .footer__tag { font-family: var(--display); font-weight: 800; font-size: var(--step-2); line-height: 1.05; margin-bottom: 1rem; }
-.footer h3 { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
+.footer h3 { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ice); margin-bottom: 0.6rem; }
 .footer p { line-height: 1.7; color: rgba(244, 239, 230, 0.8); }
 .footer a { text-decoration: none; color: var(--bone); }
-.footer a:hover { color: var(--orange); }
+.footer a:hover { color: var(--ice); }
 .footer__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-weight: 600; }
 .newsletter__row { display: flex; gap: 0.5rem; margin-top: 0.6rem; }
 .newsletter__row input { flex: 1; min-width: 0; font: inherit; padding: 0.6rem 0.9rem; border-radius: var(--r); border: 1.5px solid rgba(244, 239, 230, 0.3); background: transparent; color: var(--bone); }
-.newsletter__ok { font-weight: 600; margin-top: 0.5rem; color: var(--orange); }
+.newsletter__ok { font-weight: 600; margin-top: 0.5rem; color: var(--ice); }
 .footer__word { font-family: var(--display); font-weight: 800; font-size: clamp(5rem, 22vw, 20rem); line-height: 0.8; letter-spacing: -0.05em; color: var(--cobalt); user-select: none; overflow: hidden; }
 .footer__legal { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(244, 239, 230, 0.15); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.82rem; }
 .footer__legal a { text-decoration: underline; text-underline-offset: 2px; }
 @media (min-width: 48em) { .footer__grid { grid-template-columns: 1.4fr 1fr 1fr 1.4fr; } }
 
 /* 16. Mobile book bar ---------------------------------------------------------------------- */
-.mobile-book { position: fixed; left: 0.75rem; right: 0.75rem; bottom: calc(0.75rem + env(safe-area-inset-bottom)); z-index: 45; display: flex; align-items: center; justify-content: center; min-height: 3.3rem; border-radius: var(--r); background: var(--orange); color: var(--ink); font-family: var(--display); font-weight: 800; font-size: 1.05rem; text-decoration: none; box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.6); }
+.mobile-book { position: fixed; left: 0.75rem; right: 0.75rem; bottom: calc(0.75rem + env(safe-area-inset-bottom)); z-index: 45; display: flex; align-items: center; justify-content: center; min-height: 3.3rem; border-radius: var(--r); background: var(--ice); color: var(--ink); font-family: var(--display); font-weight: 800; font-size: 1.05rem; text-decoration: none; box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.6); }
 body { padding-bottom: 4.5rem; }
 @media (min-width: 60em) { .mobile-book { display: none; } body { padding-bottom: 0; } }
 

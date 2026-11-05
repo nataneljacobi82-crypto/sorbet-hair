@@ -329,6 +329,7 @@
             </div>
             <div class="field"><label for="f-notes">Anything we should know? <span class="opt">(optional)</span></label><textarea id="f-notes" name="notes" rows="3" placeholder="Previous color, allergies, how much time you have in the morning…"></textarea></div>
             <button class="btn btn--ice btn--block" type="submit">Request a time</button>
+            <p class="form-error" id="form-error" role="alert" tabindex="-1" hidden>We couldn't send that just now. Please try again, or call <a href="tel:+15555550133">(555) 555-0133</a>.</p>
             <p class="form-note">No deposit to request. New-guest color appointments hold a $50 deposit once confirmed, credited to your visit.</p>
           </form>
           <div class="success" id="form-success" role="status" tabindex="-1" hidden>
@@ -377,6 +378,7 @@
           <label class="visually-hidden" for="nl-email">Email address</label>
           <div class="newsletter__row"><input id="nl-email" name="email" type="email" placeholder="you@example.com" required><button class="btn btn--ice btn--sm" type="submit">Join</button></div>
           <p class="newsletter__ok" id="nl-ok" hidden>You're in. Talk soon.</p>
+          <p class="newsletter__err" id="nl-error" role="alert" tabindex="-1" hidden>That didn't go through. Please try again in a moment.</p>
         </form>
       </div>
     </div>

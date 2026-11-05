@@ -153,14 +153,22 @@
   });
 
   /* Forms: Netlify via fetch, inline success ----------------------------- */
-  function wire(formId, onDone) {
+  function wire(formId, onDone, errorId, btnLabel) {
     var form = document.getElementById(formId); if (!form) return;
+    var error = errorId ? document.getElementById(errorId) : null;
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var btn = form.querySelector('button[type="submit"]'); if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      if (error) error.hidden = true;
       var body = new URLSearchParams(new FormData(form)).toString();
       var done = function () { onDone(form); };
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body }).then(done, done);
+      var fail = function () {
+        if (btn) { btn.disabled = false; btn.textContent = btnLabel || 'Send'; }
+        if (error) { error.hidden = false; error.focus({ preventScroll: reduceMotion }); }
+      };
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+        .then(function (res) { if (!res.ok) throw new Error('Request failed with status ' + res.status); done(); })
+        .catch(fail);
     });
   }
   wire('booking-form', function (form) {
@@ -169,9 +177,9 @@
     var sty = stySel ? stySel.value : '';
     if (detail) detail.textContent = 'We have your request for ' + svc + (sty && sty.indexOf('Whoever') === -1 ? ' with ' + sty : '') + '. Expect two or three times by text within the hour during opening times.';
     form.hidden = true; if (ok) { ok.hidden = false; ok.focus({ preventScroll: reduceMotion }); }
-  });
+  }, 'form-error', 'Request a time');
   wire('newsletter-form', function (form) {
     var ok = document.getElementById('nl-ok'); var row = form.querySelector('.newsletter__row');
     if (row) row.hidden = true; if (ok) ok.hidden = false;
-  });
+  }, 'nl-error', 'Join');
 })();

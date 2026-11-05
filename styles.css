@@ -305,6 +305,9 @@ details p { padding: 0 0 1.2rem; color: var(--muted); max-width: 42em; }
 .newsletter__row { display: flex; gap: 0.5rem; margin-top: 0.6rem; }
 .newsletter__row input { flex: 1; min-width: 0; font: inherit; padding: 0.6rem 0.9rem; border-radius: var(--r); border: 1.5px solid rgba(244, 239, 230, 0.3); background: transparent; color: var(--bone); }
 .newsletter__ok { font-weight: 600; margin-top: 0.5rem; color: var(--ice); }
+.newsletter__err { font-weight: 600; margin-top: 0.5rem; color: #ffb4a8; }
+.form-error { margin: 0.9rem 0 0; padding: 0.8rem 1rem; border-left: 3px solid #d9402b; background: rgba(217, 64, 43, 0.08); font-size: 0.9rem; }
+.form-error a { font-weight: 600; }
 .footer__word { font-family: var(--display); font-weight: 800; font-size: clamp(5rem, 22vw, 20rem); line-height: 0.8; letter-spacing: -0.05em; color: var(--cobalt); user-select: none; overflow: hidden; }
 .footer__legal { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(244, 239, 230, 0.15); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.82rem; }
 .footer__legal a { text-decoration: underline; text-underline-offset: 2px; }
